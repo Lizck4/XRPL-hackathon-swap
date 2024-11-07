@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/xrpl.svg" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/vistia-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vistia Trading Platform</title>
+    <link rel="preload" href="./src/send-xrp/send-xrp.html" />
+    <link
+      rel="preload"
+      href="./src/transaction-history/transaction-history.html"
+    />
+    <link rel="preload" href="index.css" as="style" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://unpkg.com/xrpl@2.3.0/build/xrpl-latest-min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main_content text-black font-bold">
+        <div class="main_logo" id="heading_logo"></div>
+        <div class="links justify-center">
+          <button class="send_xrp duration-300" id="send_xrp_button">
+            Send XRP
+          </button>
+          <button
+            class="transaction_history duration-300"
+            id="transaction_history_button"
+          >
+            Transaction History
+          </button>
+        </div>
+        <div class="wallet_details" id="wallet">
+          <div class="heading_h3">Account Info:</div>
+          <div id="loading_wallet_details">Loading Wallet Details...</div>
+          <span class="wallet_address"></span>
+          <span class="wallet_balance"></span>
+          <span class="wallet_reserve"></span>
+          <span class="wallet_xaddress"></span>
+          <span class="view_more">
+            <!-- <button
+              class="italic p-2 bg-gray-400 hover:p-2 duration-300 hover:bg-gray-500"
+            >
+              <a id="view_more_button hover:text-white ">View More</a>
+            </button> -->
+          </span>
+        </div>
+        <div class="ledger_details">
+          <div class="heading_h3">Latest Validated Ledger:</div>
+          <div id="loading_ledger_details">Loading Ledger Details...</div>
+          <span class="ledger_index" id="ledger_index"></span>
+          <span class="ledger_hash" id="ledger_hash"></span>
+          <span class="close_time" id="close_time"></span>
+        </div>
+        <div class="main_logo" id="ending_logo"></div>
+      </div>
+    </div>
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../assets/xrpl.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction History</title>
+    <link rel="preload" href="../../index.css" as="style" />
+    <link rel="stylesheet" href="../../index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="main_content font-bold text-black p-2">
+        <div class="main_logo" id="heading_logo"></div>
+        <div class="links justify-center">
+          <button
+            class="home p-2 hover:p-2 hover:bg-gray-500 duration-300"
+            id="home_button"
+          >
+            Home
+          </button>
+          <button
+            class="send_xrp p-2 hover:p-2 hover:bg-gray-500 duration-300"
+            id="send_xrp_button"
+          >
+            Send XRP
+          </button>
+        </div>
+        <div class="tx_history_container">
+          <div class="heading_h3">Transaction History</div>
+          <div class="tx_history_data" id="tx_history_data"></div>
+          <button
+            class="load_more_button p-2 hover:p-2 hover:bg-gray-500 duration-300"
+            id="load_more_button"
+          >
+            Load More
+          </button>
+        </div>
+      </div>
+      <div class="main_logo" id="ending_logo"></div>
+    </div>
+    <script type="module" src="./transaction-history.js"></script>
+  </body>
+</html>
